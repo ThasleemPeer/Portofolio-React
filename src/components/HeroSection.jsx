@@ -4,16 +4,11 @@ import profilePic from "../assets/profile.jpg";
 function HeroSection() {
   return (
     <div className="relative flex min-h-screen items-end justify-center" id="hero">
-      {/* Profile Picture as Background */}
-      <img
-        src={profilePic}
-        alt={PROFILE.name}
-        className="absolute inset-0 z-0 h-full w-full object-cover"
-      />
-      {/* Overlay Content */}
-      <div className="z-10 flex flex-col items-center text-center text-white">
-        <h1 className="text-4xl font-bold drop-shadow-md">{PROFILE.name}</h1>
-        <p className="mt-2 text-lg drop-shadow-md">{PROFILE.info}</p>
+      <img src={profilePic} alt={PROFILE.name} className="absolute inset-0 z-10 h-full w-full object-cover" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent from-60% to-black lg:from-30%"></div>
+      <div className="z-20 mx-4 max-w-3xl pb-20">
+        <h1 className="text-5xl front-semibold uppercase tracking-wide mid:text-7xl">{PROFILE.name}</h1>
+        <p className="pt-2 font-semibold">{PROFILE.info} </p>
       </div>
     </div>
   );

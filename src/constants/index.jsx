@@ -1,197 +1,133 @@
-// import {
-//   FaXTwitter,
-//   FaGithub,
-//   FaLinkedin,
-//   FaFacebook,
-//   FaDiscord,
-//   FaInstagram,
-// } from "react-icons/fa6";
+import {
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+} from "react-icons/fa";
 
-// import { RiReactjsLine } from "react-icons/ri";
-// import { TbBrandNextjs } from "react-icons/tb";
-// import { SiMongodb } from "react-icons/si";
-// import { DiRedis } from "react-icons/di";
-// import { FaNodeJs } from "react-icons/fa";
-// import { BiLogoPostgresql } from "react-icons/bi";
-
-// import image1 from "../assets/project1.jpeg";
-// import image2 from "../assets/project2.jpeg";
-// import image3 from "../assets/project3.jpeg";
-// import image4 from "../assets/project4.jpeg";
-// import image5 from "../assets/project5.jpeg";
-// import image6 from "../assets/project6.jpeg";
-// import image7 from "../assets/project7.jpeg";
-// import image8 from "../assets/project8.jpeg";
-
-// import user1 from "../assets/profile-pictures/user1.jpg";
-// import user2 from "../assets/profile-pictures/user2.jpg";
-// import user3 from "../assets/profile-pictures/user3.jpg";
-// import user4 from "../assets/profile-pictures/user4.jpg";
+import { RiReactjsLine } from "react-icons/ri";
+import { SiRedux, SiMysql, SiPython, SiDocker, SiKubernetes, SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiGithub } from "react-icons/si";
+import { DiDjango, DiGit } from "react-icons/di";
+import image1 from "../assets/robust_payment_retry.jpg";
+import image2 from "../assets/finance_tracker_app.jpg";
+import image3 from "../assets/employee_management_system.jpg";
+import image4 from "../assets/spotify_to_youtube.jpg";
+import image5 from "../assets/smart_utility.jpg";
 
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Certifcations", href: "#certifications" },
+  { label: "Certifications", href: "#certifications" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
 
 export const PROFILE = {
-  name: "Thasleem",
-  info: "Python developer with proficiency in React, Redux, Django, SQL, and a passion for crafting innovative web applications.",
+  name: "Thasleem Peer D",
+  info: "Python developer with proficiency in React, Redux, Django, and SQL, passionate about solving real-world problems through innovative applications.",
 };
 
+export const ABOUT = {
+  text1:
+    "I create efficient and innovative solutions to real-world problems using my tech expertise.",
+  text2:
+    "Hello! I'm Thasleem, a Python developer passionate about crafting web applications that are not only highly functional but also user-friendly. My expertise lies in React, Redux, Django, and SQL, and I excel at integrating diverse technologies to build seamless digital experiences. I am committed to continuous learning and thrive on turning complex challenges into practical solutions. When I’m not coding, I enjoy exploring new technologies and applying them to meaningful projects, ensuring I stay at the forefront of the ever-evolving tech landscape.",
+};
 
-// export const ABOUT = {
-//   text1:
-//     "I create dynamic, responsive websites that blend creativity with efficiency",
-//   text2:
-//     "Hello! I'm Robert Butcher, a full-stack developer with a flair for graphic design. I thrive on crafting web experiences that are not only visually stunning but also highly functional and user-friendly. My passion for detail ensures that every project is polished and professional. Beyond coding, I'm an avid explorer of new cultures and cuisines. My curiosity drives me to stay on the cutting edge of technology and design trends, bringing innovative and practical solutions to every challenge. Whether I'm developing a sleek website or diving into the latest tech, I am dedicated to delivering excellence in every project.",
-// };
+export const PROJECTS = [
+  {
+    title: "Robust Payment Retry Mechanism",
+    subtitle: "A payment system retrying failed transactions up to 5 times within 2 minutes, showing retry counts and success rates.",
+    image: image1,
+  },
+  {
+    title: "Finance Tracker App",
+    subtitle: "A React-based app for tracking expenses with real-time bank updates using Plaid and advanced data visualization.",
+    image: image2,
+  },
+  {
+    title: "Employee Management System",
+    subtitle: "A system for managing employee records with role-based access and efficient data handling using Django and PostgreSQL.",
+    image: image3,
+  },
+  {
+    title: "Spotify to YouTube Downloader",
+    subtitle: "An app automating the download of Spotify playlists or songs as YouTube content, showcasing API integration.",
+    image: image4,
+  },
+  {
+    title: "Smart Utility Management System",
+    subtitle: "A platform to book daily wage workers like plumbers with real-time slot availability and booking features.",
+    image: image5,
+  },
+];
 
-// export const PROJECTS = [
-//   {
-//     title: "E-commerce Platform",
-//     subtitle:
-//       "A full-stack e-commerce platform built with React, Node.js, and MongoDB.",
-//     image: image1,
-//   },
-//   {
-//     title: "Social Media App",
-//     subtitle:
-//       "A social media application developed using Next.js and Firebase.",
-//     image: image2,
-//   },
-//   {
-//     title: "Project Management Tool",
-//     subtitle: "A project management tool built with Django and PostgreSQL.",
-//     image: image3,
-//   },
-//   {
-//     title: "Personal Portfolio",
-//     subtitle:
-//       "A personal portfolio website designed with HTML, CSS, and JavaScript.",
-//     image: image4,
-//   },
-//   {
-//     title: "Weather Dashboard",
-//     subtitle:
-//       "A weather dashboard application built with Vue.js and Express.js.",
-//     image: image5,
-//   },
-//   {
-//     title: "Blog Platform",
-//     subtitle:
-//       "A blogging platform developed with Ruby on Rails and PostgreSQL.",
-//     image: image6,
-//   },
-//   {
-//     title: "Fitness Tracker",
-//     subtitle: "A fitness tracking app created using Flutter and Firebase.",
-//     image: image7,
-//   },
-//   {
-//     title: "Recipe Finder",
-//     subtitle: "A recipe finder application developed with Angular and Node.js.",
-//     image: image8,
-//   },
-// ];
 
-// export const SKILLS = [
-//   {
-//     icon: <RiReactjsLine className="text-4xl lg:text-6xl text-cyan-400" />,
-//     name: "React",
-//     experience: "2+ years",
-//   },
-//   {
-//     icon: <TbBrandNextjs className="text-4xl lg:text-6xl text-white" />,
-//     name: "Next.js",
-//     experience: "1+ year",
-//   },
-//   {
-//     icon: <SiMongodb className="text-4xl lg:text-6xl text-green-600" />,
-//     name: "MongoDB",
-//     experience: "1.5+ years",
-//   },
-//   {
-//     icon: <DiRedis className="text-4xl lg:text-6xl text-red-600" />,
-//     name: "Redis",
-//     experience: "1+ year",
-//   },
-//   {
-//     icon: <FaNodeJs className="text-4xl lg:text-6xl text-green-600" />,
-//     name: "Node.js",
-//     experience: "2+ years",
-//   },
-//   {
-//     icon: <BiLogoPostgresql className="text-4xl lg:text-6xl text-sky-700" />,
-//     name: "PostgreSQL",
-//     experience: "1+ year",
-//   },
-// ];
+export const SKILLS = [
+  {
+    icon: <RiReactjsLine className="text-4xl lg:text-6xl text-cyan-400" />,
+    name: "React",
+  },
+  {
+    icon: <SiRedux className="text-4xl lg:text-6xl text-purple-600" />,
+    name: "Redux",
+  },
+  {
+    icon: <DiDjango className="text-4xl lg:text-6xl text-green-700" />,
+    name: "Django",
+  },
+  {
+    icon: <SiMysql className="text-4xl lg:text-6xl text-sky-700" />,
+    name: "MySQL",
+  },
+  {
+    icon: <SiPython className="text-4xl lg:text-6xl text-blue-500" />,
+    name: "Python",
+  },
+ 
+  {
+    icon: <SiJavascript className="text-4xl lg:text-6xl text-yellow-400" />,
+    name: "JavaScript",
+  },
+  {
+    icon: <SiBootstrap className="text-4xl lg:text-6xl text-purple-700" />,
+    name: "Bootstrap",
+  },
+  {
+    icon: <DiGit className="text-4xl lg:text-6xl text-red-600" />,
+    name: "Git",
+  },
+  {
+    icon: <SiGithub className="text-4xl lg:text-6xl text-gray-400" />,
+    name: "GitHub",
+  },
+  {
+    icon: <SiDocker className="text-4xl lg:text-6xl text-blue-600" />,
+    name: "Docker",
+  },
+  {
+    icon: <SiKubernetes className="text-4xl lg:text-6xl text-blue-400" />,
+    name: "Kubernetes",
+  },
+];
 
-// export const ACHIEVEMENT = {
-//   title: "International Hackaton - Tokyo",
-//   award: "Gold Medalist - 2024",
-//   description:
-//     "Winner of the 2024 Algo coding representing the University of Oxford. This achievement showcases exceptional problem-solving skills and dedication. The event provided a platform to innovate and collaborate with the brightest minds, resulting in a prestigious accolade.",
-// };
 
-// export const TESTIMONIALS = [
-//   {
-//     name: "Emily Johnson",
-//     title: "CEO, Tech Innovators",
-//     quote:
-//       "Working with Robert has been an incredible experience. His design sensibilities and technical expertise are top-notch, making him a valuable asset to any project.",
-//     image: user1,
-//   },
-//   {
-//     name: "Michael Lee",
-//     title: "CTO, Creative Minds",
-//     quote:
-//       "Robert consistently delivers high-quality work, combining creativity and technical prowess. His ability to solve complex problems with elegant solutions is truly impressive.",
-//     image: user2,
-//   },
-//   {
-//     name: "Sophia Martinez",
-//     title: "Lead Developer, Digital Solutions",
-//     quote:
-//       "Robert's dedication to his craft is evident in every project he undertakes. His innovative approach and attention to detail set him apart as a leading designer and developer.",
-//     image: user3,
-//   },
-//   {
-//     name: "Daniel Thompson",
-//     title: "Project Manager, InnovateX",
-//     quote:
-//       "Robert's ability to understand client needs and translate them into beautiful, functional designs is remarkable. He is a true professional who always exceeds expectations.",
-//     image: user4,
-//   },
-// ];
-
-// export const SOCIAL_MEDIA_LINKS = [
-//   {
-//     href: "https://x.com/",
-//     icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://x.com/",
-//     icon: <FaDiscord fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://x.com/",
-//     icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://x.com/",
-//     icon: <FaXTwitter fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://github.com/",
-//     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
-//   },
-//   {
-//     href: "https://www.linkedin.com/",
-//     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
-//   },
-// ];
+export const SOCIAL_MEDIA_LINKS = [
+  {
+    href: "https://github.com/",
+    icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://www.linkedin.com/",
+    icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://www.instagram.com/",
+    icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
+  },
+  {
+    href: "https://www.facebook.com/",
+    icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
+  },
+];

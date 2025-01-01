@@ -7,3 +7,8 @@
 :root{
   font-family: "Poppins", serif;
 }
+.backdrop-blur-lg {
+  backdrop-filter: blur(10px);
+}
+
+

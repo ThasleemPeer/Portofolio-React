@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { NAVIGATION_LINKS } from "../constants";
+import logo from '../assets/logo.png';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { NAVIGATION_LINKS } from '../constants';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,7 +19,7 @@ const Navbar = () => {
       const offsetPosition = elementPosition + window.scrollY + offset;
       window.scrollTo({
         top: offsetPosition,
-        behavior: "smooth",
+        behavior: 'smooth',
       });
       setIsMobileMenuOpen(false);
     }
@@ -27,20 +27,16 @@ const Navbar = () => {
 
   return (
     <nav className="fixed left-0 right-0 top-0 z-50">
-      <div className="container mx-auto flex items-center justify-between px-4 py-3 backdrop-blur-md bg-black/30">
-        {/* Logo */}
-        <div className="flex items-center">
-          <a href="#hero">
-            <img src={logo} alt="Logo" className="h-10" />
-          </a>
-        </div>
-
-        {/* Desktop Menu */}
-        <ul className="hidden lg:flex items-center gap-6 text-white">
+      {/* Desktop Menu */}
+      <div className="hidden lg:flex items-center justify-between bg-black/30 px-4 py-3 backdrop-blur-lg">
+        <a href="#">
+          <img src={logo} alt="Logo" width={90} />
+        </a>
+        <ul className="flex gap-6">
           {NAVIGATION_LINKS.map((item, index) => (
             <li key={index}>
               <a
-                className="text-sm font-medium hover:text-yellow-400 transition"
+                className="text-sm text-white hover:text-yellow-400"
                 href={item.href}
                 onClick={(e) => handleLinkClick(e, item.href)}
               >
@@ -49,28 +45,32 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="lg:hidden text-white focus:outline-none"
-          onClick={toggleMobileMenu}
-        >
-          {isMobileMenuOpen ? (
-            <FaTimes className="h-6 w-6" />
-          ) : (
-            <FaBars className="h-6 w-6" />
-          )}
-        </button>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden bg-black/70 text-white">
-          <ul className="flex flex-col items-start gap-4 px-6 py-4">
+      <div className="lg:hidden bg-black/30 px-4 py-3 backdrop-blur-lg">
+        <div className="flex items-center justify-between">
+          <a href="#">
+            <img src={logo} alt="Logo" width={90} />
+          </a>
+          <button
+            className="focus:outline-none"
+            onClick={toggleMobileMenu}
+          >
+            {isMobileMenuOpen ? (
+              <FaTimes className="h-6 w-6 text-white" />
+            ) : (
+              <FaBars className="h-6 w-6 text-white" />
+            )}
+          </button>
+        </div>
+
+        {isMobileMenuOpen && (
+          <ul className="mt-4 flex flex-col gap-4">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
-                  className="block text-lg font-medium hover:text-yellow-400 transition"
+                  className="block text-lg text-white hover:text-yellow-400"
                   href={item.href}
                   onClick={(e) => handleLinkClick(e, item.href)}
                 >
@@ -79,8 +79,8 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </div>
-      )}
+        )}
+      </div>
     </nav>
   );
 };
