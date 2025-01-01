@@ -1,9 +1,5 @@
-import {
-  FaGithub,
-  FaLinkedin,
-  FaInstagram,
-  FaFacebook,
-} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa"; 
+
 
 import { RiReactjsLine } from "react-icons/ri";
 import { SiRedux, SiMysql, SiPython, SiDocker, SiKubernetes, SiHtml5, SiCss3, SiJavascript, SiBootstrap, SiGithub } from "react-icons/si";
@@ -18,7 +14,6 @@ export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
   { label: "Projects", href: "#projects" },
   { label: "Skills", href: "#skills" },
-  { label: "Certifications", href: "#certifications" },
   { label: "Experience", href: "#experience" },
   { label: "Contact", href: "#contact" },
 ];
@@ -115,19 +110,15 @@ export const SKILLS = [
 
 export const SOCIAL_MEDIA_LINKS = [
   {
-    href: "https://github.com/",
+    href: "https://github.com/ThasleemPeer",
     icon: <FaGithub fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://www.linkedin.com/",
+    href: "https://www.linkedin.com/in/thasleem-peer-d-591791280/",
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "https://www.instagram.com/",
-    icon: <FaInstagram fontSize={25} className="hover:opacity-80" />,
-  },
-  {
-    href: "https://www.facebook.com/",
-    icon: <FaFacebook fontSize={25} className="hover:opacity-80" />,
+    href: "mailto:thasleempeer361@gmail.com",
+    icon: <FaEnvelope fontSize={25} className="hover:opacity-80" />, // Using FaEnvelope for email
   },
 ];
