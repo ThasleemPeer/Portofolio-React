@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar"
 import About from "./components/About"
 import Projects from "./components/Projects"
 import Skills from "./components/Skills"
+import Experience from "./components/Experience"
 export default function App() {
   return (
     <main className="overflow-x-hidden bg-black tracking-tighter text-gray-200 antialiased">
@@ -11,6 +12,7 @@ export default function App() {
       <About/>
       <Projects/>
       <Skills/>
+      <Experience/>
 
     </main>
   )
