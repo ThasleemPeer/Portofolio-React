@@ -6,9 +6,15 @@ import { SiRedux, SiMysql, SiPython, SiDocker, SiKubernetes, SiHtml5, SiCss3, Si
 import { DiDjango, DiGit } from "react-icons/di";
 import image1 from "../assets/robust_payment_retry.jpg";
 import image2 from "../assets/finance_tracker_app.jpg";
-import image3 from "../assets/employee_management_system.jpg";
+import employee_management from "../assets/employee_management_system.jpg";
 import image4 from "../assets/spotify_to_youtube.jpg";
-import image5 from "../assets/smart_utility.jpg";
+import smart_utility from "../assets/smart_utility.jpg";
+import fake_snap from '../assets/fake_snap.jpg';
+import career_insights from '../assets/career_insights.jpg';
+import smart_attendance from '../assets/smart_attendance.jpeg'
+import hangman_port from '../assets/hangman_port.jpg'
+
+
 
 export const NAVIGATION_LINKS = [
   { label: "About", href: "#about" },
@@ -20,44 +26,57 @@ export const NAVIGATION_LINKS = [
 
 export const PROFILE = {
   name: "Thasleem Peer D",
-  info: "Python developer with proficiency in React, Redux, Django, and SQL, passionate about solving real-world problems through innovative applications.",
+  info: "Full-stack Python developer skilled in Django, React, and Docker, building real-world solutions through robust, scalable applications.",
 };
 
 export const ABOUT = {
   text1:
-    "I create efficient and innovative solutions to real-world problems using my tech expertise.",
+    "I specialize in developing real-world tech solutions that combine intelligent backends with interactive frontends.",
   text2:
-    "Hello! I'm Thasleem, a Python developer passionate about crafting web applications that are not only highly functional but also user-friendly. My expertise lies in React, Redux, Django, and SQL, and I excel at integrating diverse technologies to build seamless digital experiences. I am committed to continuous learning and thrive on turning complex challenges into practical solutions. When I’m not coding, I enjoy exploring new technologies and applying them to meaningful projects, ensuring I stay at the forefront of the ever-evolving tech landscape.",
+    "Hi, I'm Thasleem — a passionate full-stack developer with hands-on experience in building practical, impactful applications like AI-generated image detectors, face recognition systems, smart utilities, resume analyzers, and interactive games. My core stack includes Python, Django, React, Docker, and SQL. From deploying containerized applications to integrating machine learning into real-world tools, I enjoy crafting solutions that solve meaningful problems. I'm constantly pushing boundaries and love collaborating on innovative tech projects.",
 };
+
+
+
 
 export const PROJECTS = [
   {
-    title: "Robust Payment Retry Mechanism",
-    subtitle: "A payment system retrying failed transactions up to 5 times within 2 minutes, showing retry counts and success rates.",
-    image: image1,
-  },
-  {
-    title: "Finance Tracker App",
-    subtitle: "A React-based app for tracking expenses with real-time bank updates using Plaid and advanced data visualization.",
-    image: image2,
-  },
-  {
-    title: "Employee Management System",
-    subtitle: "A system for managing employee records with role-based access and efficient data handling using Django and PostgreSQL.",
-    image: image3,
-  },
-  {
-    title: "Spotify to YouTube Downloader",
-    subtitle: "An app automating the download of Spotify playlists or songs as YouTube content, showcasing API integration.",
-    image: image4,
+    title: "FakeSnap – AI-Generated Image Detector",
+    subtitle: "Detects AI-generated (fake) images by analyzing pixel patterns and statistical features using a Python + Django backend.",
+    image: fake_snap,
+    link: "https://github.com/ThasleemPeer/Fake-Image-Detector.git",
   },
   {
     title: "Smart Utility Management System",
-    subtitle: "A platform to book daily wage workers like plumbers with real-time slot availability and booking features.",
-    image: image5,
+    subtitle: "Platform for booking daily utility services with real-time slot availability, built using Django and React.",
+    image: smart_utility,
+    link: "https://github.com/ThasleemPeer/Smart-utility-Management-System.git",
+  },
+  {
+    title: "Smart Attendance System",
+    subtitle: "Face recognition-based attendance system using Django REST API and Image Encoding for automated student marking.",
+    image: smart_attendance,
+    link: "https://github.com/ThasleemPeer/Smart-Attendance-System.git",
+  },
+  {
+    title: "Dockerized Hangman Game",
+    subtitle: "Full-stack Hangman game with CSS animations and sound effects, deployed using Podman containers.",
+    image: hangman_port,
+    link: "https://github.com/Peer361/Hangman_game--Podman-Deployment",
+  },
+  {
+    title: "Career Insights Engine",
+    subtitle: "Resume analyzer and career recommender that extracts skills and suggests personalized growth paths using ML.",
+    image: career_insights,
+    link: "https://github.com/ThasleemPeer/Career-Insights-Engine.git",
+  },
+  {
+    title: "Employee Management System",
+    subtitle: "Role-based employee record manager using Django with CRUD operations and PostgreSQL integration.",
+    image: employee_management,
+    link: "https://github.com/ThasleemPeer/Employee-Management-System.git",
   },
 ];
-
 
 export const SKILLS = [
   {
@@ -118,7 +137,7 @@ export const SOCIAL_MEDIA_LINKS = [
     icon: <FaLinkedin fontSize={25} className="hover:opacity-80" />,
   },
   {
-    href: "mailto:thasleempeer361@gmail.com",
+    href: "mailto:abbu22122004@gmail.com",
     icon: <FaEnvelope fontSize={25} className="hover:opacity-80" />, // Using FaEnvelope for email
   },
 ];

@@ -11,7 +11,7 @@ const Projects = () => {
             <Card image={project.image}
                   title={project.title}
                   subtitle={project.subtitle}
-                  link='#'/>
+                  link={project.link}/>
           </div>
         ))}
       </div>
